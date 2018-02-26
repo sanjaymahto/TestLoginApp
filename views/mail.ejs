@@ -1,0 +1,18 @@
+<h2>Emails:</h2>
+<% if (mails.length == 0) { %>
+	<h2>Sorry! No mail Found.</h2>
+<% } else { %>
+<table>
+    <% for(var i=0; i < mails.length; i++) { %>
+       <tr>
+         <td ><h2><b><a href='/mails/detail/<%= mails[i].id %>'><%= mails[i].id %></a></b></h2></td>
+       </tr>
+       <tr>
+        <td><h4><%= mails[i].snippet %></h4></td>
+       </tr>
+    <% } %>
+    </table>
+    <% } %>
+    <h3>Click on the Id To view the Mail Thread.</h3>
+<h2>Please Click the link Below to Go to Account Page.</h2>
+<a href="/account">Account</a>

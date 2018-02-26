@@ -1,0 +1,33 @@
+<h2> : Mail Detail : </h2>
+<h2>Mail ID: </h2>
+<h3>
+    <%= mail.id %>
+</h3>
+<h2>Mail Content: </h2>
+<h3>
+    <%= mail.snippet%>
+</h3>
+
+<h2>: Want to send This Mail as SMS :</h2>
+<h3>Please Enter Your Mobile Number</h3>
+<form name="searchForm" method="POST" action='/mail/send/sms/<%= mail.id%>'>
+    <table>
+        <tr>
+            Message:
+            <td><textarea rows="5" cols="50" name="text" disabled><%= mail.snippet %></textarea></td>
+        </tr>
+        <tr>
+            <td>Number: <input colspan="32" type="number" name="mobileNumber"></td>
+        </tr>
+        <td colspan="2"><input type="submit" value="Send"></td>
+        </tr>
+    </table>
+</form>
+
+<h2>Please Click the link Below to Go to Account Page.</h2>
+<a href="/account">Account</a>
+<hr/>
+<h2>: JSON fromat of Mail :</h2>
+<h3>
+    <%= JSON.stringify(mail) %>
+</h3>

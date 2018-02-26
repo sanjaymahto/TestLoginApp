@@ -1,0 +1,8 @@
+<% if (!user) { %>
+	<h2>Welcome! Please log in using Google Account.</h2>
+	<a href="/auth/google">Login with Google</a>
+<% } else { %>
+	<h2>Hello, <%= user.name %>.</h2>
+	<h2>Please Click the link Below to Go to Account Page.</h2>
+	<a href="/account">Account</a>
+<% } %>
