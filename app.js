@@ -15,7 +15,7 @@ var express = require('express')
 var userModel = require('./userModel');
 var User = mongoose.model('User');
 
-let client = new plivo.Client('MANMJJYWY1ZTCWYTC1NZ', 'MjdjZmQyMGExYWFlYWYxMWY3NTVlYTY1OTE5NzNi');
+let client = new plivo.Client('**************', '*****************');
 
 var dbPath = "mongodb://localhost/GoogleAuthAndMailCheck";
 // command to connect with database
@@ -28,8 +28,8 @@ mongoose.connection.once('open', function () {
 app.use(require('morgan')('combined'));
 // API Access link for creating client ID and secret:
 // https://code.google.com/apis/console/
-var GOOGLE_CLIENT_ID = "570609486769-q2039pk4tb3d335g39g2oas6bblrjp3e.apps.googleusercontent.com"
-  , GOOGLE_CLIENT_SECRET = "SIetnHFdwPRiUxy5Lzkv1iCv";
+var GOOGLE_CLIENT_ID = "Your Google client ID"
+  , GOOGLE_CLIENT_SECRET = "your client secret";
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
